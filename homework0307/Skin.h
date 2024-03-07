@@ -9,8 +9,8 @@ class Skin{
     string skinName;
     int cost;
     int isSolded;
-    string code;
 public:
+    string code;
     int getFunction(int m);
     void setFunction(string t, int a, string name, int c);
     void printFunction();
