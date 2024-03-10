@@ -21,7 +21,7 @@ int main()
         char3[0].setFunction("g", 3, "watermelon set", 200);
         char3[1].setFunction("h", 3, "penguin set", 600);
         char3[2].setFunction("i", 3, "polar bear set", 1000);
-        
+
     int money;
     int shopOrNot = 1;
     int ChooseCharNum;
@@ -127,6 +127,5 @@ int main()
             break;
         }
     }
-
     return 0;
 }
