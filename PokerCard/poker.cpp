@@ -28,10 +28,10 @@ int main()
 
     cin >> num;
     // ramdom
-    bool isRam;
+    bool isRam = false;
     char YorN;
     int ram[13] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-
+/*
     cout << "要隨機嗎？（Y/N）：";
     cin >> YorN;
 
@@ -48,7 +48,7 @@ int main()
         cout << "what? 我先按照順序輸出好了" << endl;
         isRam = false;
     }
-
+*/
     Card a(f);
 
     if (isRam == false)
@@ -165,7 +165,6 @@ int main()
             }
         }
     }else{
-        
 
     }
     return 0;
