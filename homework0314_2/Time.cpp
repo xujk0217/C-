@@ -43,26 +43,15 @@ bool Time::setTime(int h, int m, int s){
         //cout<<"Error: time cannot be negative"<<endl;
         return false;
     }
-    if(s>=60){
-        m += s/60;
-        sec = s%60;
-    }else{
-        sec = s;
-    }
-    if(m>=60){
-        h += m/60;
-        min = m%60;
-    }else{
-        min = m;
-    }
-    if(h>=24){
-        //cout<<"Error: time cannot be more than 24 hours"<<endl;
+    if(s>=60 || m>=60 || h>=24){
         return false;
-    }else{
-        hrs = h;
     }
+    hrs = h;
+    min = m;
+    sec = s;
     return true;
 }
+
 void Time::showTime(){
     if(hrs>12){
         if(hrs-12<10){
@@ -80,7 +69,19 @@ void Time::showTime(){
                 }
             }
         }else{
-            cout<<hrs-12<<":"<<min<<":"<<sec<<" PM"<<endl;
+            if(min<10){
+                if(sec<10){
+                    cout<<hrs-12<<":0"<<min<<":0"<<sec<<" PM"<<endl;
+                }else{
+                    cout<<hrs-12<<":0"<<min<<":"<<sec<<" PM"<<endl;
+                }
+            }else{
+                if(sec<10){
+                    cout<<hrs-12<<":"<<min<<":0"<<sec<<" PM"<<endl;
+                }else{
+                    cout<<hrs-12<<":"<<min<<":"<<sec<<" PM"<<endl;
+                }
+            }
         }
     }else{
         if(hrs<10){
@@ -98,7 +99,19 @@ void Time::showTime(){
                 }
             }
         }else{
-            cout<<hrs<<":"<<min<<":"<<sec<<" AM"<<endl;
+            if(min<10){
+                if(sec<10){
+                    cout<<hrs<<":0"<<min<<":0"<<sec<<" AM"<<endl;
+                }else{
+                    cout<<hrs<<":0"<<min<<":"<<sec<<" AM"<<endl;
+                }
+            }else{
+                if(sec<10){
+                    cout<<hrs<<":"<<min<<":0"<<sec<<" AM"<<endl;
+                }else{
+                    cout<<hrs<<":"<<min<<":"<<sec<<" AM"<<endl;
+                }
+            }
         }
     }
 }
