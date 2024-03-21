@@ -47,7 +47,7 @@ void BiSTree::printTree() {
         return;
     }
     PrintSubTree((*root).GetLeft());
-    cout << (*root).GetNum() << endl;
+    cout << (*root).GetNum() << " ";
     PrintSubTree((*root).GetRight());
     cout << endl;
 }
@@ -57,6 +57,6 @@ void BiSTree::PrintSubTree(Node *cur) {
         return;
     }
     PrintSubTree((*cur).GetLeft());
-    cout << (*cur).GetNum() << endl;
+    cout << (*cur).GetNum() << " ";
     PrintSubTree((*cur).GetRight());
 }
