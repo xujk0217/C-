@@ -22,6 +22,6 @@ int main(){
                 }
             }  
         }
-        cout << "change: "<< type << endl; 
+        cout << "output: "<< type << endl; 
     }
 }
