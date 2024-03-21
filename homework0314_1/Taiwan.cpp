@@ -20,7 +20,7 @@ int main(){
     cout<<"plaese enter your number: ";
     cin.getline(str, 15);
     cout<<"Input: "<<str<<endl;
-    
+
     if (check(str)){
         cout<<"Correct!!!"<<endl;
     }else{
